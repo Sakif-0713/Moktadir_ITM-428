@@ -3,7 +3,7 @@
 **Course:** ZUMS ITM 427 / ITM 428 Lab  
 **Student:** Moktadir  
 **Live Hosted Demo URL:** `<INSERT_LIVE_HOSTED_URL>` *(Use "1-Click Evaluator Demo" on `/` for instant access)*  
-**GitHub Repository URL:** `<INSERT_GITHUB_REPO_URL>`  
+**GitHub Repository URL:** https://github.com/Sakif-0713/Moktadir_ITM-428  
 **Standalone SQL File:** `database.sql` *(uploaded separately alongside `.docx`)*
 
 ---

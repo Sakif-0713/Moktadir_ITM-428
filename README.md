@@ -43,7 +43,7 @@ PromptLab enables teams to ingest knowledge documents, test interchangeable chun
 ### Installation Steps
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/Moktadir_ITM-428.git
+git clone https://github.com/Sakif-0713/Moktadir_ITM-428.git
 cd Moktadir_ITM-428
 
 # 2. Install PHP dependencies
