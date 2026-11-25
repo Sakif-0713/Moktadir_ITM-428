@@ -7,9 +7,15 @@ use App\Http\Controllers\PromptTemplateController;
 use App\Http\Controllers\RefactorLogController;
 use App\Http\Controllers\TestRunController;
 use App\Http\Controllers\WorkspaceController;
+use App\Models\Workspace;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [WorkspaceController::class, 'index'])->name('home');
+Route::get('/', function () {
+    $workspaces = Workspace::withCount(['documents', 'promptTemplates', 'testRuns'])->latest()->get();
+    $demoWorkspace = $workspaces->firstWhere('is_public_demo', true) ?? $workspaces->first();
+
+    return view('welcome', compact('workspaces', 'demoWorkspace'));
+})->name('home');
 Route::post('/demo/guest-login', [GuestAccessController::class, 'loginAsGuest'])->name('demo.guest-login');
 Route::get('/demo/guest-login', [GuestAccessController::class, 'loginAsGuest'])->name('demo.guest-login.get');
 
