@@ -3,9 +3,11 @@
 @section('title', 'Workspaces — RAG Evaluation Workbench')
 
 @section('content')
-<div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div class="mb-6 rounded-2xl border border-slate-200/80 p-6 shadow-xs flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+     style="background: radial-gradient(at 15% 20%, rgba(191, 219, 254, 0.45) 0px, transparent 55%), radial-gradient(at 85% 30%, rgba(251, 207, 232, 0.38) 0px, transparent 55%), #ffffff;">
     <div>
-        <h1 class="text-2xl font-bold text-slate-900">Evaluation Workspaces</h1>
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">PromptLab Workspaces</span>
+        <h1 class="text-2xl font-extrabold text-slate-900 mt-1">Evaluation Workspaces</h1>
         <p class="text-sm text-slate-600 mt-1">
             Manage knowledge bases, prompt version snapshots, and side-by-side RAG evaluation runs.
         </p>
@@ -13,7 +15,7 @@
 
     <div class="flex items-center gap-3">
         <a href="{{ route('demo.guest-login.get') }}"
-           class="inline-flex items-center px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-sm transition">
+           class="inline-flex items-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-sm shadow-blue-600/20 transition">
             Launch 1-Click Instructor Demo
         </a>
     </div>
