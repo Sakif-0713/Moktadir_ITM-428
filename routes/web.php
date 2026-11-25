@@ -11,8 +11,13 @@ use App\Models\Workspace;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $workspaces = Workspace::withCount(['documents', 'promptTemplates', 'testRuns'])->latest()->get();
-    $demoWorkspace = $workspaces->firstWhere('is_public_demo', true) ?? $workspaces->first();
+    try {
+        $workspaces = Workspace::withCount(['documents', 'promptTemplates', 'testRuns'])->latest()->get();
+        $demoWorkspace = $workspaces->firstWhere('is_public_demo', true) ?? $workspaces->first();
+    } catch (\Throwable) {
+        $workspaces = collect();
+        $demoWorkspace = null;
+    }
 
     return view('welcome', compact('workspaces', 'demoWorkspace'));
 })->name('home');
