@@ -102,9 +102,3 @@ php artisan test
 - **Boundary & Robustness Tests:** Empty documents, zero/oversized chunk clamping, missing `{{variables}}`, and simulated HTTP 429 API fallback
 - **Integration Tests:** End-to-end `EvaluationFacade` pipeline & `MementoService` rollback
 - **Smoke Tests:** 1-click guest login, all primary routes HTTP 200, validation errors, and 404 handling
-
----
-
-## 📄 Academic Documentation (`docs/`)
-- [Project Proposal](docs/proposal.md)
-- [Final Submission Report (`.docx`-ready)](docs/final_submission_report.md)
